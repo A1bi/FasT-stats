@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0E6C3991947E46B00957538 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0E6C39B1947E46B00957538 /* InfoPlist.strings */; };
+		F0EC417819476F04002B8E63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EC417719476F04002B8E63 /* Foundation.framework */; };
+		F0EC417A19476F04002B8E63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EC417919476F04002B8E63 /* CoreGraphics.framework */; };
+		F0EC417C19476F04002B8E63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EC417B19476F04002B8E63 /* UIKit.framework */; };
+		F0EC418419476F04002B8E63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC418319476F04002B8E63 /* main.m */; };
+		F0EC418819476F04002B8E63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC418719476F04002B8E63 /* AppDelegate.m */; };
+		F0EC418A19476F04002B8E63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0EC418919476F04002B8E63 /* Images.xcassets */; };
+		F0EC41A71947732F002B8E63 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EC41A61947732F002B8E63 /* Storyboard.storyboard */; };
+		F0EC41C019477BA1002B8E63 /* NSAlert+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41AB19477BA1002B8E63 /* NSAlert+MKNetworkKitAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41C119477BA1002B8E63 /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41AD19477BA1002B8E63 /* NSData+MKBase64.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41C219477BA1002B8E63 /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41AF19477BA1002B8E63 /* NSDate+RFC1123.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41C319477BA1002B8E63 /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41B119477BA1002B8E63 /* NSDictionary+RequestEncoding.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41C419477BA1002B8E63 /* NSString+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41B319477BA1002B8E63 /* NSString+MKNetworkKitAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41C519477BA1002B8E63 /* UIAlertView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41B519477BA1002B8E63 /* UIAlertView+MKNetworkKitAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41C619477BA1002B8E63 /* UIImageView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41B719477BA1002B8E63 /* UIImageView+MKNetworkKitAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41C719477BA1002B8E63 /* MKNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41B919477BA1002B8E63 /* MKNetworkEngine.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41C819477BA1002B8E63 /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41BC19477BA1002B8E63 /* MKNetworkOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41C919477BA1002B8E63 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41BF19477BA1002B8E63 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F0EC41CC1947DC52002B8E63 /* FasTApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EC41CB1947DC52002B8E63 /* FasTApi.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F0E6C3951947E3B100957538 /* FasT-stats-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FasT-stats-Info.plist"; sourceTree = "<group>"; };
+		F0E6C39A1947E46B00957538 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F0E6C39C1947E47500957538 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F0EC417419476F04002B8E63 /* FasT-stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FasT-stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0EC417719476F04002B8E63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F0EC417919476F04002B8E63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F0EC417B19476F04002B8E63 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F0EC418319476F04002B8E63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0EC418519476F04002B8E63 /* FasT-stats-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FasT-stats-Prefix.pch"; sourceTree = "<group>"; };
+		F0EC418619476F04002B8E63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F0EC418719476F04002B8E63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F0EC418919476F04002B8E63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F0EC41A61947732F002B8E63 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		F0EC41AA19477BA1002B8E63 /* NSAlert+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		F0EC41AB19477BA1002B8E63 /* NSAlert+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		F0EC41AC19477BA1002B8E63 /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
+		F0EC41AD19477BA1002B8E63 /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
+		F0EC41AE19477BA1002B8E63 /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
+		F0EC41AF19477BA1002B8E63 /* NSDate+RFC1123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFC1123.m"; sourceTree = "<group>"; };
+		F0EC41B019477BA1002B8E63 /* NSDictionary+RequestEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RequestEncoding.h"; sourceTree = "<group>"; };
+		F0EC41B119477BA1002B8E63 /* NSDictionary+RequestEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RequestEncoding.m"; sourceTree = "<group>"; };
+		F0EC41B219477BA1002B8E63 /* NSString+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		F0EC41B319477BA1002B8E63 /* NSString+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		F0EC41B419477BA1002B8E63 /* UIAlertView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		F0EC41B519477BA1002B8E63 /* UIAlertView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		F0EC41B619477BA1002B8E63 /* UIImageView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		F0EC41B719477BA1002B8E63 /* UIImageView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		F0EC41B819477BA1002B8E63 /* MKNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
+		F0EC41B919477BA1002B8E63 /* MKNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngine.m; sourceTree = "<group>"; };
+		F0EC41BA19477BA1002B8E63 /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
+		F0EC41BB19477BA1002B8E63 /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
+		F0EC41BC19477BA1002B8E63 /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkOperation.m; sourceTree = "<group>"; };
+		F0EC41BE19477BA1002B8E63 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F0EC41BF19477BA1002B8E63 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F0EC41CA1947DC52002B8E63 /* FasTApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasTApi.h; sourceTree = "<group>"; };
+		F0EC41CB1947DC52002B8E63 /* FasTApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasTApi.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0EC417119476F04002B8E63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0EC417A19476F04002B8E63 /* CoreGraphics.framework in Frameworks */,
+				F0EC417C19476F04002B8E63 /* UIKit.framework in Frameworks */,
+				F0EC417819476F04002B8E63 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0EC416B19476F04002B8E63 = {
+			isa = PBXGroup;
+			children = (
+				F0EC417D19476F04002B8E63 /* FasT-stats */,
+				F0EC417619476F04002B8E63 /* Frameworks */,
+				F0EC417519476F04002B8E63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0EC417519476F04002B8E63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0EC417419476F04002B8E63 /* FasT-stats.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0EC417619476F04002B8E63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0EC41A819477BA1002B8E63 /* MKNetworkKit */,
+				F0EC417719476F04002B8E63 /* Foundation.framework */,
+				F0EC417919476F04002B8E63 /* CoreGraphics.framework */,
+				F0EC417B19476F04002B8E63 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0EC417D19476F04002B8E63 /* FasT-stats */ = {
+			isa = PBXGroup;
+			children = (
+				F0EC418619476F04002B8E63 /* AppDelegate.h */,
+				F0EC418719476F04002B8E63 /* AppDelegate.m */,
+				F0EC41CA1947DC52002B8E63 /* FasTApi.h */,
+				F0EC41CB1947DC52002B8E63 /* FasTApi.m */,
+				F0EC41A61947732F002B8E63 /* Storyboard.storyboard */,
+				F0EC418919476F04002B8E63 /* Images.xcassets */,
+				F0EC417E19476F04002B8E63 /* Supporting Files */,
+			);
+			path = "FasT-stats";
+			sourceTree = "<group>";
+		};
+		F0EC417E19476F04002B8E63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0EC418319476F04002B8E63 /* main.m */,
+				F0E6C3951947E3B100957538 /* FasT-stats-Info.plist */,
+				F0EC418519476F04002B8E63 /* FasT-stats-Prefix.pch */,
+				F0E6C39B1947E46B00957538 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0EC41A819477BA1002B8E63 /* MKNetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				F0EC41A919477BA1002B8E63 /* Categories */,
+				F0EC41B819477BA1002B8E63 /* MKNetworkEngine.h */,
+				F0EC41B919477BA1002B8E63 /* MKNetworkEngine.m */,
+				F0EC41BA19477BA1002B8E63 /* MKNetworkKit.h */,
+				F0EC41BB19477BA1002B8E63 /* MKNetworkOperation.h */,
+				F0EC41BC19477BA1002B8E63 /* MKNetworkOperation.m */,
+				F0EC41BD19477BA1002B8E63 /* Reachability */,
+			);
+			name = MKNetworkKit;
+			path = submodules/MKNetworkKit/MKNetworkKit;
+			sourceTree = "<group>";
+		};
+		F0EC41A919477BA1002B8E63 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F0EC41AA19477BA1002B8E63 /* NSAlert+MKNetworkKitAdditions.h */,
+				F0EC41AB19477BA1002B8E63 /* NSAlert+MKNetworkKitAdditions.m */,
+				F0EC41AC19477BA1002B8E63 /* NSData+MKBase64.h */,
+				F0EC41AD19477BA1002B8E63 /* NSData+MKBase64.m */,
+				F0EC41AE19477BA1002B8E63 /* NSDate+RFC1123.h */,
+				F0EC41AF19477BA1002B8E63 /* NSDate+RFC1123.m */,
+				F0EC41B019477BA1002B8E63 /* NSDictionary+RequestEncoding.h */,
+				F0EC41B119477BA1002B8E63 /* NSDictionary+RequestEncoding.m */,
+				F0EC41B219477BA1002B8E63 /* NSString+MKNetworkKitAdditions.h */,
+				F0EC41B319477BA1002B8E63 /* NSString+MKNetworkKitAdditions.m */,
+				F0EC41B419477BA1002B8E63 /* UIAlertView+MKNetworkKitAdditions.h */,
+				F0EC41B519477BA1002B8E63 /* UIAlertView+MKNetworkKitAdditions.m */,
+				F0EC41B619477BA1002B8E63 /* UIImageView+MKNetworkKitAdditions.h */,
+				F0EC41B719477BA1002B8E63 /* UIImageView+MKNetworkKitAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		F0EC41BD19477BA1002B8E63 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				F0EC41BE19477BA1002B8E63 /* Reachability.h */,
+				F0EC41BF19477BA1002B8E63 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0EC417319476F04002B8E63 /* FasT-stats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0EC41A019476F04002B8E63 /* Build configuration list for PBXNativeTarget "FasT-stats" */;
+			buildPhases = (
+				F0EC417019476F04002B8E63 /* Sources */,
+				F0EC417119476F04002B8E63 /* Frameworks */,
+				F0EC417219476F04002B8E63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FasT-stats";
+			productName = "FasT-stats";
+			productReference = F0EC417419476F04002B8E63 /* FasT-stats.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0EC416C19476F04002B8E63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Albisigns;
+			};
+			buildConfigurationList = F0EC416F19476F04002B8E63 /* Build configuration list for PBXProject "FasT-stats" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = F0EC416B19476F04002B8E63;
+			productRefGroup = F0EC417519476F04002B8E63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0EC417319476F04002B8E63 /* FasT-stats */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0EC417219476F04002B8E63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0EC418A19476F04002B8E63 /* Images.xcassets in Resources */,
+				F0E6C3991947E46B00957538 /* InfoPlist.strings in Resources */,
+				F0EC41A71947732F002B8E63 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0EC417019476F04002B8E63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0EC418419476F04002B8E63 /* main.m in Sources */,
+				F0EC418819476F04002B8E63 /* AppDelegate.m in Sources */,
+				F0EC41CC1947DC52002B8E63 /* FasTApi.m in Sources */,
+				F0EC41C019477BA1002B8E63 /* NSAlert+MKNetworkKitAdditions.m in Sources */,
+				F0EC41C319477BA1002B8E63 /* NSDictionary+RequestEncoding.m in Sources */,
+				F0EC41C419477BA1002B8E63 /* NSString+MKNetworkKitAdditions.m in Sources */,
+				F0EC41C519477BA1002B8E63 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
+				F0EC41C819477BA1002B8E63 /* MKNetworkOperation.m in Sources */,
+				F0EC41C619477BA1002B8E63 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
+				F0EC41C719477BA1002B8E63 /* MKNetworkEngine.m in Sources */,
+				F0EC41C219477BA1002B8E63 /* NSDate+RFC1123.m in Sources */,
+				F0EC41C919477BA1002B8E63 /* Reachability.m in Sources */,
+				F0EC41C119477BA1002B8E63 /* NSData+MKBase64.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F0E6C39B1947E46B00957538 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0E6C39A1947E46B00957538 /* en */,
+				F0E6C39C1947E47500957538 /* de */,
+			);
+			name = InfoPlist.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0EC419E19476F04002B8E63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0EC419F19476F04002B8E63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0EC41A119476F04002B8E63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"FAST_API_URL=\\@\\\"192.168.10.21\\\"",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34921862-9FE3-4B71-9F15-1E6B73B5D192";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F0EC41A219476F04002B8E63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
+				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34921862-9FE3-4B71-9F15-1E6B73B5D192";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0EC416F19476F04002B8E63 /* Build configuration list for PBXProject "FasT-stats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC419E19476F04002B8E63 /* Debug */,
+				F0EC419F19476F04002B8E63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0EC41A019476F04002B8E63 /* Build configuration list for PBXNativeTarget "FasT-stats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0EC41A119476F04002B8E63 /* Debug */,
+				F0EC41A219476F04002B8E63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0EC416C19476F04002B8E63 /* Project object */;
+}
