@@ -13,8 +13,10 @@ static FasTApi *defaultApi = nil;
 
 #ifdef DEBUG
     static NSString *kFasTApiUrl = FAST_API_URL;
+    static BOOL kFasTApiSSL = NO;
 #else
     static NSString *kFasTApiUrl = @"theater-kaisersesch.de";
+    static BOOL kFasTApiSSL = YES;
 #endif
 
 
@@ -51,10 +53,10 @@ static FasTApi *defaultApi = nil;
 
 #pragma mark public methods
 
-- (void)registerDeviceTokenWithServer:(NSString *)token
+- (void)registerDeviceTokenWithServer:(NSString *)appName token:(NSString *)token settings:(NSDictionary *)settings
 {
     NSString *path = [NSString stringWithFormat:@"/api/push_notifications"];
-    NSDictionary *data = @{@"app": @"stats", @"token": token};
+    NSDictionary *data = @{@"app": appName, @"token": token, @"settings": settings};
     
     [self makeRequestWithPath:path method:@"POST" data:data callback:NULL];
 }
@@ -63,7 +65,7 @@ static FasTApi *defaultApi = nil;
 
 - (void)makeRequestWithPath:(NSString *)path method:(NSString *)method data:(NSDictionary *)data callback:(FasTApiResponseBlock)callback
 {
-	MKNetworkOperation *op = [netEngine operationWithPath:path params:data httpMethod:method ssl:YES];
+	MKNetworkOperation *op = [netEngine operationWithPath:path params:data httpMethod:method ssl:kFasTApiSSL];
 	[op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
 	
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
@@ -79,6 +81,12 @@ static FasTApi *defaultApi = nil;
 #endif
 	
 	[netEngine enqueueOperation:op];
+}
+
+- (void)dealloc
+{
+    [netEngine release];
+    [super dealloc];
 }
 
 @end

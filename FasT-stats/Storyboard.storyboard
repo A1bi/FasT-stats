@@ -1,45 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="evV-ey-sBh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="B6F-LU-3rq">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="y6w-Le-608">
+        <!--FasT Statistik-->
+        <scene sceneID="023-x8-der">
             <objects>
-                <viewController id="evV-ey-sBh" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q1o-eo-iw8"/>
-                        <viewControllerLayoutGuide type="bottom" id="b2b-St-HTl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SbC-Ph-Fkd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FasT Statistik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGl-qN-zaa">
-                                <rect key="frame" x="47" y="71" width="280" height="47"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="In Zukunft wird hier mehr zu sehen sein." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ta4-KL-QmO">
-                                <rect key="frame" x="47" y="271" width="280" height="48"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="DGl-qN-zaa" firstAttribute="centerX" secondItem="SbC-Ph-Fkd" secondAttribute="centerX" id="MpK-9G-czD"/>
-                            <constraint firstItem="ta4-KL-QmO" firstAttribute="centerX" secondItem="SbC-Ph-Fkd" secondAttribute="centerX" id="ZAY-Aa-rkf"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bN3-0t-SSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="1VP-TE-y0e" customClass="SettingsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dHE-HF-QFC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Einstellungen" id="30u-g9-DK3">
+                                <string key="footerTitle">Schalte diese Funktion aus, wenn du nicht mehr durch ein lautes „Ka-Ching“ gestört werden möchtest. Du wirst dann ab sofort stumm über neue Verkäufe informiert.
+
+Unabhängig von dieser Einstellung bleibt die App natürlich auch stumm, wenn dein Handy auf lautlos gestellt ist.</string>
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="LUo-2b-qN6">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LUo-2b-qN6" id="vKM-Pe-dql">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ule-0z-KbK">
+                                                    <rect key="frame" x="256" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="soundEnabledChanged:" destination="1VP-TE-y0e" eventType="valueChanged" id="zMq-se-hGt"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="„Ka-Ching“" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-I1-r8Q">
+                                                    <rect key="frame" x="17" y="11" width="88" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ule-0z-KbK" firstAttribute="centerY" secondItem="vKM-Pe-dql" secondAttribute="centerY" id="9cC-zD-UJL"/>
+                                                <constraint firstItem="6Kd-I1-r8Q" firstAttribute="leading" secondItem="vKM-Pe-dql" secondAttribute="leadingMargin" constant="9" id="RYB-s0-ZBD"/>
+                                                <constraint firstItem="6Kd-I1-r8Q" firstAttribute="centerY" secondItem="vKM-Pe-dql" secondAttribute="centerY" id="jw5-CL-7gS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ule-0z-KbK" secondAttribute="trailing" constant="7" id="xFE-eA-dDM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="1VP-TE-y0e" id="Xmx-eD-bUh"/>
+                            <outlet property="delegate" destination="1VP-TE-y0e" id="0jw-QU-z9F"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="FasT Statistik" id="Crh-2I-sIa"/>
+                    <connections>
+                        <outlet property="soundEnabledSwitch" destination="Ule-0z-KbK" id="5uh-3w-rP8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlR-AQ-ake" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="-65"/>
+            <point key="canvasLocation" x="514" y="-111"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qw0-xd-PgM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B6F-LU-3rq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ouz-2P-vRa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1VP-TE-y0e" kind="relationship" relationship="rootViewController" id="Kk2-fD-Poq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kGC-BC-tz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18" y="-111"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

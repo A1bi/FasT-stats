@@ -31,15 +31,33 @@
     }
 }
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceTokenData
 {
-    NSString *tokenString = [[[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]]stringByReplacingOccurrencesOfString:@" " withString:@""];
-    [[FasTApi defaultApi] registerDeviceTokenWithServer:tokenString];
+    deviceToken = [[[[deviceTokenData description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]]stringByReplacingOccurrencesOfString:@" " withString:@""] retain];
+    [self updateRemoteRegistration];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
     NSLog(@"Failed to register for remote notifications with error: %@", error);
+}
+
+- (void)updateRemoteRegistration
+{
+    if (!deviceToken) {
+        return;
+    }
+    
+    BOOL soundEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"soundEnabled"];
+    NSDictionary *settings = @{@"sound_enabled": @(soundEnabled)};
+    
+    [[FasTApi defaultApi] registerDeviceTokenWithServer:@"stats" token:deviceToken settings:settings];
+}
+
+- (void)dealloc
+{
+    [deviceToken release];
+    [super dealloc];
 }
 
 @end

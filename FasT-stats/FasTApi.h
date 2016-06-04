@@ -18,6 +18,6 @@ typedef void (^FasTApiResponseBlock)(NSDictionary *response);
 }
 
 + (FasTApi *)defaultApi;
-- (void)registerDeviceTokenWithServer:(NSString *)token;
+- (void)registerDeviceTokenWithServer:(NSString *)appName token:(NSString *)token settings:(NSDictionary *)settings;
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F03B237C1D02DC6C004AAFD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */; };
+		F03B237F1D02DF7D004AAFD4 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */; };
 		F0E6C3991947E46B00957538 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0E6C39B1947E46B00957538 /* InfoPlist.strings */; };
 		F0E6C39E1949130500957538 /* cash.aif in Resources */ = {isa = PBXBuildFile; fileRef = F0E6C39D1949130500957538 /* cash.aif */; };
 		F0EC417819476F04002B8E63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EC417719476F04002B8E63 /* Foundation.framework */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		F03B237D1D02DF7D004AAFD4 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		F0E6C3951947E3B100957538 /* FasT-stats-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FasT-stats-Info.plist"; sourceTree = "<group>"; };
 		F0E6C39A1947E46B00957538 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0E6C39C1947E47500957538 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -127,7 +132,10 @@
 				F0EC418719476F04002B8E63 /* AppDelegate.m */,
 				F0EC41CA1947DC52002B8E63 /* FasTApi.h */,
 				F0EC41CB1947DC52002B8E63 /* FasTApi.m */,
+				F03B237D1D02DF7D004AAFD4 /* SettingsTableViewController.h */,
+				F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */,
 				F0EC41A61947732F002B8E63 /* Storyboard.storyboard */,
+				F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */,
 				F0E6C39F1949133400957538 /* assets */,
 				F0EC417E19476F04002B8E63 /* Supporting Files */,
 			);
@@ -252,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03B237C1D02DC6C004AAFD4 /* LaunchScreen.xib in Resources */,
 				F0EC418A19476F04002B8E63 /* Images.xcassets in Resources */,
 				F0E6C39E1949130500957538 /* cash.aif in Resources */,
 				F0E6C3991947E46B00957538 /* InfoPlist.strings in Resources */,
@@ -266,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03B237F1D02DF7D004AAFD4 /* SettingsTableViewController.m in Sources */,
 				F0EC418419476F04002B8E63 /* main.m in Sources */,
 				F0EC418819476F04002B8E63 /* AppDelegate.m in Sources */,
 				F0EC41CC1947DC52002B8E63 /* FasTApi.m in Sources */,
@@ -385,7 +395,7 @@
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
-					"FAST_API_URL=\\@\\\"192.168.10.21\\\"",
+					"FAST_API_URL=\\@\\\"ao-imac.local:4000\\\"",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
