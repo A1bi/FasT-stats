@@ -35,6 +35,7 @@
 		F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		F03B237D1D02DF7D004AAFD4 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		F09A4DE71EE37E8900999DC3 /* FasT-stats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FasT-stats.entitlements"; sourceTree = "<group>"; };
 		F0E6C3951947E3B100957538 /* FasT-stats-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FasT-stats-Info.plist"; sourceTree = "<group>"; };
 		F0E6C39A1947E46B00957538 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0E6C39C1947E47500957538 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		F0EC417D19476F04002B8E63 /* FasT-stats */ = {
 			isa = PBXGroup;
 			children = (
+				F09A4DE71EE37E8900999DC3 /* FasT-stats.entitlements */,
 				F0EC418619476F04002B8E63 /* AppDelegate.h */,
 				F0EC418719476F04002B8E63 /* AppDelegate.m */,
 				F0EC41CA1947DC52002B8E63 /* FasTApi.h */,
@@ -389,8 +391,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Albrecht Oster (G4EE2T3YYQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Albrecht Oster (G4EE2T3YYQ)";
+				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -402,7 +406,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4c47b5b9-8f25-4cd0-842b-aca7a439863c";
+				PROVISIONING_PROFILE = "23e0d7ec-8758-4762-af62-49097120fb82";
+				PROVISIONING_PROFILE_SPECIFIER = "FasT Stats Dev";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,15 +419,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Albrecht Oster (V48L6BF6M3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Albrecht Oster (V48L6BF6M3)";
+				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d814cf5f-6205-4f48-bd50-7a1d04b7e0d5";
+				PROVISIONING_PROFILE = "581b45d2-98eb-41f2-9a9e-5e75a6adc1d5";
+				PROVISIONING_PROFILE_SPECIFIER = "FasT Stats Adhoc";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
