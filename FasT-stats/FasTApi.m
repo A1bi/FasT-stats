@@ -7,22 +7,24 @@
 //
 
 #import "FasTApi.h"
-#import "MKNetworkEngine.h"
+
+#import <AFNetworking.h>
 
 static FasTApi *defaultApi = nil;
 
 #ifdef DEBUG
     static NSString *kFasTApiUrl = FAST_API_URL;
-    static BOOL kFasTApiSSL = NO;
 #else
-    static NSString *kFasTApiUrl = @"theater-kaisersesch.de";
-    static BOOL kFasTApiSSL = YES;
+    static NSString *kFasTApiUrl = @"https://www.theater-kaisersesch.de";
 #endif
 
 
 @interface FasTApi ()
+{
+    AFHTTPSessionManager *http;
+}
 
-- (void)makeRequestWithPath:(NSString *)path method:(NSString *)method data:(NSDictionary *)data callback:(FasTApiResponseBlock)callback;
+- (void)POST:(NSString *)path data:(NSDictionary *)data callback:(FasTApiResponseBlock)callback;
 
 @end
 
@@ -46,7 +48,9 @@ static FasTApi *defaultApi = nil;
 {
     self = [super init];
     if (self) {
-        netEngine = [[MKNetworkEngine alloc] initWithHostName:kFasTApiUrl];
+        http = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:kFasTApiUrl]];
+        [http setRequestSerializer:[AFJSONRequestSerializer serializer]];
+        [http setResponseSerializer:[AFJSONResponseSerializer serializer]];
     }
     return self;
 }
@@ -57,35 +61,24 @@ static FasTApi *defaultApi = nil;
 {
     NSString *path = [NSString stringWithFormat:@"/api/push_notifications"];
     NSDictionary *data = @{@"app": appName, @"token": token, @"settings": settings};
-    
-    [self makeRequestWithPath:path method:@"POST" data:data callback:NULL];
+    [self POST:path data:data callback:NULL];
 }
 
 #pragma mark private methods
 
-- (void)makeRequestWithPath:(NSString *)path method:(NSString *)method data:(NSDictionary *)data callback:(FasTApiResponseBlock)callback
+- (void)POST:(NSString *)path data:(NSDictionary *)data callback:(FasTApiResponseBlock)callback
 {
-	MKNetworkOperation *op = [netEngine operationWithPath:path params:data httpMethod:method ssl:kFasTApiSSL];
-	[op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
-	
-    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
-		if (callback) callback([completedOperation responseJSON]);
-        
-	} errorHandler:^(MKNetworkOperation *completedOperation, NSError* error) {
-		NSLog(@"%@", error);
+    [http POST:path parameters:data progress:nil success:^(NSURLSessionDataTask *task, id response) {
+        if (callback) callback(response);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
         if (callback) callback(nil);
-	}];
-    
-#if DEBUG
-    [op setShouldContinueWithInvalidCertificate:YES];
-#endif
-	
-	[netEngine enqueueOperation:op];
+    }];
 }
 
 - (void)dealloc
 {
-    [netEngine release];
+    [http release];
     [super dealloc];
 }
 
