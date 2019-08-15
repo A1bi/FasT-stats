@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D463AFF460FA557A9495A563 /* libPods-FasT-stats.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB1EC26DB39E6301B76624 /* libPods-FasT-stats.a */; };
+		F024791D230610EF00B60243 /* debug.local.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F024791C230610EE00B60243 /* debug.local.xcconfig */; };
 		F03B237C1D02DC6C004AAFD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */; };
 		F03B237F1D02DF7D004AAFD4 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */; };
 		F046B1E023048D2400210548 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F046B1DF23048D2400210548 /* Podfile */; };
@@ -27,6 +28,9 @@
 		03DB1EC26DB39E6301B76624 /* libPods-FasT-stats.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FasT-stats.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2EBF571C665A9FD8DF26E9 /* Pods-FasT-stats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FasT-stats.release.xcconfig"; path = "Target Support Files/Pods-FasT-stats/Pods-FasT-stats.release.xcconfig"; sourceTree = "<group>"; };
 		56DD3827F54CF02D74E8EB2E /* Pods-FasT-stats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FasT-stats.debug.xcconfig"; path = "Target Support Files/Pods-FasT-stats/Pods-FasT-stats.debug.xcconfig"; sourceTree = "<group>"; };
+		F024791B230610D500B60243 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		F024791C230610EE00B60243 /* debug.local.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.local.xcconfig; sourceTree = "<group>"; };
+		F024791E2306110F00B60243 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		F03B237D1D02DF7D004AAFD4 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
@@ -72,6 +76,16 @@
 				2E2EBF571C665A9FD8DF26E9 /* Pods-FasT-stats.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F024791A230610AD00B60243 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				F024791B230610D500B60243 /* debug.xcconfig */,
+				F024791C230610EE00B60243 /* debug.local.xcconfig */,
+				F024791E2306110F00B60243 /* release.xcconfig */,
+			);
+			path = config;
 			sourceTree = "<group>";
 		};
 		F0E6C39F1949133400957538 /* assets */ = {
@@ -133,6 +147,7 @@
 		F0EC417E19476F04002B8E63 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F024791A230610AD00B60243 /* config */,
 				F0EC418319476F04002B8E63 /* main.m */,
 				F0E6C3951947E3B100957538 /* FasT-stats-Info.plist */,
 				F0EC418519476F04002B8E63 /* FasT-stats-Prefix.pch */,
@@ -206,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F024791D230610EF00B60243 /* debug.local.xcconfig in Resources */,
 				F046B1E023048D2400210548 /* Podfile in Resources */,
 				F03B237C1D02DC6C004AAFD4 /* LaunchScreen.xib in Resources */,
 				F0EC418A19476F04002B8E63 /* Images.xcassets in Resources */,
@@ -272,6 +288,7 @@
 /* Begin XCBuildConfiguration section */
 		F0EC419E19476F04002B8E63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F024791B230610D500B60243 /* debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -308,6 +325,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
+					"API_HOST=@\\\"$(API_HOST)\\\"",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -327,6 +345,7 @@
 		};
 		F0EC419F19476F04002B8E63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F024791E2306110F00B60243 /* release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -359,6 +378,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "API_HOST=@\\\"$(API_HOST)\\\"";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

@@ -12,13 +12,6 @@
 
 static FasTApi *defaultApi = nil;
 
-#ifdef DEBUG
-    static NSString *kFasTApiUrl = FAST_API_URL;
-#else
-    static NSString *kFasTApiUrl = @"https://www.theater-kaisersesch.de";
-#endif
-
-
 @interface FasTApi ()
 {
     AFHTTPSessionManager *http;
@@ -48,7 +41,7 @@ static FasTApi *defaultApi = nil;
 {
     self = [super init];
     if (self) {
-        http = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:kFasTApiUrl]];
+        http = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:API_HOST]];
         [http setRequestSerializer:[AFJSONRequestSerializer serializer]];
         [http setResponseSerializer:[AFJSONResponseSerializer serializer]];
     }
@@ -70,7 +63,7 @@ static FasTApi *defaultApi = nil;
 {
     [http POST:path parameters:data progress:nil success:^(NSURLSessionDataTask *task, id response) {
         if (callback) callback(response);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
         if (callback) callback(nil);
     }];
