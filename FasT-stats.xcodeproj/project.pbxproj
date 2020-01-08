@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D463AFF460FA557A9495A563 /* libPods-FasT-stats.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB1EC26DB39E6301B76624 /* libPods-FasT-stats.a */; };
-		F024791D230610EF00B60243 /* debug.local.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F024791C230610EE00B60243 /* debug.local.xcconfig */; };
 		F03B237C1D02DC6C004AAFD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */; };
 		F03B237F1D02DF7D004AAFD4 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */; };
 		F046B1E023048D2400210548 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F046B1DF23048D2400210548 /* Podfile */; };
@@ -184,7 +183,7 @@
 		F0EC416C19476F04002B8E63 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = Albisigns;
 				TargetAttributes = {
 					F0EC417319476F04002B8E63 = {
@@ -221,7 +220,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F024791D230610EF00B60243 /* debug.local.xcconfig in Resources */,
 				F046B1E023048D2400210548 /* Podfile in Resources */,
 				F03B237C1D02DC6C004AAFD4 /* LaunchScreen.xib in Resources */,
 				F0EC418A19476F04002B8E63 /* Images.xcassets in Resources */,
@@ -398,12 +396,13 @@
 			baseConfigurationReference = 56DD3827F54CF02D74E8EB2E /* Pods-FasT-stats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Albrecht Oster (G4EE2T3YYQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Albrecht Oster (G4EE2T3YYQ)";
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
@@ -414,6 +413,7 @@
 				);
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "23e0d7ec-8758-4762-af62-49097120fb82";
@@ -428,17 +428,19 @@
 			baseConfigurationReference = 2E2EBF571C665A9FD8DF26E9 /* Pods-FasT-stats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Albrecht Oster (V48L6BF6M3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Albrecht Oster (V48L6BF6M3)";
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "581b45d2-98eb-41f2-9a9e-5e75a6adc1d5";
