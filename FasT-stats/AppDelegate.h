@@ -11,12 +11,7 @@
 @class MKNetworkEngine;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-    NSString *deviceToken;
-}
 
 @property (strong, nonatomic) UIWindow *window;
-
-- (void)updateRemoteRegistration;
 
 @end

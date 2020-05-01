@@ -11,6 +11,12 @@
 
 @import UserNotifications;
 
+@interface AppDelegate ()
+
+- (void)updateRemoteRegistration:(NSString *)deviceToken;
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -24,8 +30,15 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceTokenData
 {
-    deviceToken = [[[[deviceTokenData description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]]stringByReplacingOccurrencesOfString:@" " withString:@""] retain];
-    [self updateRemoteRegistration];
+    if (deviceTokenData.length < 1) return;
+
+    NSMutableString *deviceToken = [NSMutableString string];
+    const char *bytes = deviceTokenData.bytes;
+    for (int i = 0; i < deviceTokenData.length; i++) {
+        [deviceToken appendFormat:@"%02.2hhx", bytes[i]];
+    }
+
+    [self updateRemoteRegistration:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
@@ -33,7 +46,7 @@
     NSLog(@"Failed to register for remote notifications with error: %@", error);
 }
 
-- (void)updateRemoteRegistration
+- (void)updateRemoteRegistration:(NSString *)deviceToken
 {
     if (!deviceToken) {
         return;
@@ -43,12 +56,6 @@
     NSDictionary *settings = @{@"sound_enabled": @(soundEnabled)};
     
     [[FasTApi defaultApi] registerDeviceTokenWithServer:@"stats" token:deviceToken settings:settings];
-}
-
-- (void)dealloc
-{
-    [deviceToken release];
-    [super dealloc];
 }
 
 @end

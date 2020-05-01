@@ -128,7 +128,6 @@
 		F0EC417D19476F04002B8E63 /* FasT-stats */ = {
 			isa = PBXGroup;
 			children = (
-				F09A4DE71EE37E8900999DC3 /* FasT-stats.entitlements */,
 				F0EC418619476F04002B8E63 /* AppDelegate.h */,
 				F0EC418719476F04002B8E63 /* AppDelegate.m */,
 				F0EC41CA1947DC52002B8E63 /* FasTApi.h */,
@@ -137,6 +136,7 @@
 				F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */,
 				F0EC41A61947732F002B8E63 /* Storyboard.storyboard */,
 				F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */,
+				F09A4DE71EE37E8900999DC3 /* FasT-stats.entitlements */,
 				F0E6C39F1949133400957538 /* assets */,
 				F0EC417E19476F04002B8E63 /* Supporting Files */,
 			);
@@ -400,9 +400,9 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Albrecht Oster (G4EE2T3YYQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Albrecht Oster (G4EE2T3YYQ)";
-				CURRENT_PROJECT_VERSION = 15;
+				CODE_SIGN_IDENTITY = "Apple Development: Albrecht Oster (G4EE2T3YYQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Albrecht Oster (G4EE2T3YYQ)";
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
@@ -413,7 +413,7 @@
 				);
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MARKETING_VERSION = 1.1.3;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "23e0d7ec-8758-4762-af62-49097120fb82";
@@ -432,15 +432,15 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Albrecht Oster (V48L6BF6M3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Albrecht Oster (V48L6BF6M3)";
-				CURRENT_PROJECT_VERSION = 15;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Albrecht Oster (V48L6BF6M3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Albrecht Oster (V48L6BF6M3)";
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MARKETING_VERSION = 1.1.3;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "581b45d2-98eb-41f2-9a9e-5e75a6adc1d5";
