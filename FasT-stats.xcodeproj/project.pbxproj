@@ -420,7 +420,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
-				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development: Albrecht Oster (G4EE2T3YYQ)";
@@ -452,7 +451,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
-				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Distribution: Albrecht Oster (V48L6BF6M3)";

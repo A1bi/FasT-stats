@@ -44,7 +44,6 @@
         [deviceToken appendFormat:@"%02.2hhx", bytes[i]];
     }
 
-    [pushDeviceToken release];
     pushDeviceToken = [deviceToken copy];
     
     [self updateRemoteRegistration];

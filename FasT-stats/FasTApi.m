@@ -32,11 +32,6 @@ static FasTApi *defaultApi = nil;
     return defaultApi;
 }
 
-+ (id)allocWithZone:(NSZone *)zone
-{
-	return [[self defaultApi] retain];
-}
-
 - (id)init
 {
     self = [super init];
@@ -67,12 +62,6 @@ static FasTApi *defaultApi = nil;
         NSLog(@"%@", error);
         if (callback) callback(nil);
     }];
-}
-
-- (void)dealloc
-{
-    [http release];
-    [super dealloc];
 }
 
 @end

@@ -11,7 +11,7 @@
 
 @interface SettingsTableViewController ()
 
-@property (retain, nonatomic) IBOutlet UISwitch *soundEnabledSwitch;
+@property (nonatomic) IBOutlet UISwitch *soundEnabledSwitch;
 
 - (IBAction)soundEnabledChanged:(id)sender;
 
@@ -38,11 +38,6 @@
     [[NSUserDefaults standardUserDefaults] setBool:[_soundEnabledSwitch isOn] forKey:@"soundEnabled"];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate updateRemoteRegistration];
-}
-
-- (void)dealloc {
-    [_soundEnabledSwitch release];
-    [super dealloc];
 }
 
 @end
