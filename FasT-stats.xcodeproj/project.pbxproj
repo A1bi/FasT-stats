@@ -425,7 +425,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development: Albrecht Oster (G4EE2T3YYQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Albrecht Oster (G4EE2T3YYQ)";
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
@@ -436,7 +436,7 @@
 				);
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MARKETING_VERSION = 1.1.6;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "23e0d7ec-8758-4762-af62-49097120fb82";
@@ -457,13 +457,13 @@
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Distribution: Albrecht Oster (V48L6BF6M3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Albrecht Oster (V48L6BF6M3)";
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MARKETING_VERSION = 1.1.6;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "581b45d2-98eb-41f2-9a9e-5e75a6adc1d5";
