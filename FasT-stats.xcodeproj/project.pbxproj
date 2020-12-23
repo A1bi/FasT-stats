@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D463AFF460FA557A9495A563 /* libPods-FasT-stats.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB1EC26DB39E6301B76624 /* libPods-FasT-stats.a */; };
+		93050341346794D56404405D /* Pods_FasT_stats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97AE7462EDF782A84707A54 /* Pods_FasT_stats.framework */; };
 		F03B237C1D02DC6C004AAFD4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */; };
 		F03B237F1D02DF7D004AAFD4 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */; };
 		F046B1E023048D2400210548 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F046B1DF23048D2400210548 /* Podfile */; };
@@ -24,16 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03DB1EC26DB39E6301B76624 /* libPods-FasT-stats.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FasT-stats.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2EBF571C665A9FD8DF26E9 /* Pods-FasT-stats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FasT-stats.release.xcconfig"; path = "Target Support Files/Pods-FasT-stats/Pods-FasT-stats.release.xcconfig"; sourceTree = "<group>"; };
 		56DD3827F54CF02D74E8EB2E /* Pods-FasT-stats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FasT-stats.debug.xcconfig"; path = "Target Support Files/Pods-FasT-stats/Pods-FasT-stats.debug.xcconfig"; sourceTree = "<group>"; };
+		B97AE7462EDF782A84707A54 /* Pods_FasT_stats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FasT_stats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F024791B230610D500B60243 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		F024791C230610EE00B60243 /* debug.local.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.local.xcconfig; sourceTree = "<group>"; };
 		F024791E2306110F00B60243 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		F03B237B1D02DC6C004AAFD4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		F03B237D1D02DF7D004AAFD4 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		F03B237E1D02DF7D004AAFD4 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
-		F046B1DF23048D2400210548 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		F046B1DF23048D2400210548 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F09A4DE71EE37E8900999DC3 /* FasT-stats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FasT-stats.entitlements"; sourceTree = "<group>"; };
 		F0E6C3951947E3B100957538 /* FasT-stats-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FasT-stats-Info.plist"; sourceTree = "<group>"; };
 		F0E6C39A1947E46B00957538 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 				F0EC417A19476F04002B8E63 /* CoreGraphics.framework in Frameworks */,
 				F0EC417C19476F04002B8E63 /* UIKit.framework in Frameworks */,
 				F0EC417819476F04002B8E63 /* Foundation.framework in Frameworks */,
-				D463AFF460FA557A9495A563 /* libPods-FasT-stats.a in Frameworks */,
+				93050341346794D56404405D /* Pods_FasT_stats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 				F0EC417719476F04002B8E63 /* Foundation.framework */,
 				F0EC417919476F04002B8E63 /* CoreGraphics.framework */,
 				F0EC417B19476F04002B8E63 /* UIKit.framework */,
-				03DB1EC26DB39E6301B76624 /* libPods-FasT-stats.a */,
+				B97AE7462EDF782A84707A54 /* Pods_FasT_stats.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,6 +167,7 @@
 				F0EC417019476F04002B8E63 /* Sources */,
 				F0EC417119476F04002B8E63 /* Frameworks */,
 				F0EC417219476F04002B8E63 /* Resources */,
+				C1326EA32034E4F130968C96 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +253,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1326EA32034E4F130968C96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FasT-stats/Pods-FasT-stats-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FasT-stats/Pods-FasT-stats-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -402,7 +423,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development: Albrecht Oster (G4EE2T3YYQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Albrecht Oster (G4EE2T3YYQ)";
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
@@ -413,7 +434,7 @@
 				);
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "23e0d7ec-8758-4762-af62-49097120fb82";
@@ -434,13 +455,13 @@
 				CODE_SIGN_ENTITLEMENTS = "FasT-stats/FasT-stats.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Distribution: Albrecht Oster (V48L6BF6M3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Albrecht Oster (V48L6BF6M3)";
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = V48L6BF6M3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasT-stats/FasT-stats-Prefix.pch";
 				INFOPLIST_FILE = "FasT-stats/FasT-stats-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.theater-kaisersesch.stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "581b45d2-98eb-41f2-9a9e-5e75a6adc1d5";

@@ -9,11 +9,13 @@
 #import "AppDelegate.h"
 #import "FasTApi.h"
 
+@import Sentry;
 @import UserNotifications;
 
 @interface AppDelegate ()
 
 - (void)updateRemoteRegistration:(NSString *)deviceToken;
+- (void)setupSentry;
 
 @end
 
@@ -21,6 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setupSentry];
+    
     [UNUserNotificationCenter.currentNotificationCenter requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionBadge + UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError *error) {}];
 
     [application registerForRemoteNotifications];
@@ -56,6 +60,12 @@
     NSDictionary *settings = @{@"sound_enabled": @(soundEnabled)};
     
     [[FasTApi defaultApi] registerDeviceTokenWithServer:@"stats" token:deviceToken settings:settings];
+}
+
+- (void)setupSentry {
+    [SentrySDK startWithConfigureOptions:^(SentryOptions *options) {
+        options.dsn = @"https://d86d07d7034541ad9f3fff1fe761ab24@sentry.a0s.de/11";
+    }];
 }
 
 @end
