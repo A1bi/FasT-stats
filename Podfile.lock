@@ -1,36 +1,18 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
-    - AFNetworking/NSURLSession
   - Sentry (6.0.12):
     - Sentry/Core (= 6.0.12)
   - Sentry/Core (6.0.12)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.2)
   - Sentry (~> 6.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
     - Sentry
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Sentry: 8ffcfe3416e0a58b90bb1ae319e8e8a13022a03e
 
-PODFILE CHECKSUM: 71f699e060d61c0dbdee9dbba67341de2a4985cf
+PODFILE CHECKSUM: 882084faea45437f394c4b2544c6fe5dfd74451c
 
 COCOAPODS: 1.9.3

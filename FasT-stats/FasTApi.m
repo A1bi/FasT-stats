@@ -8,60 +8,80 @@
 
 #import "FasTApi.h"
 
-#import <AFNetworking.h>
-
-static FasTApi *defaultApi = nil;
-
 @interface FasTApi ()
-{
-    AFHTTPSessionManager *http;
-}
 
-- (void)POST:(NSString *)path data:(NSDictionary *)data callback:(FasTApiResponseBlock)callback;
++ (void)makeRequestWithMethod:(NSString *)method action:(NSString *)action parameters:(NSDictionary *)params data:(NSDictionary *)data completion:(nullable void (^)(id _Nullable response, NSError * _Nullable error))completion;
++ (NSURLSession *)session;
++ (NSURL *)urlWithPath:(NSString *)action params:(NSDictionary *)params;
 
 @end
 
 
 @implementation FasTApi
 
-+ (FasTApi *)defaultApi
-{
-    if (!defaultApi) {
-        defaultApi = [[super allocWithZone:NULL] init];
-    }
-    return defaultApi;
-}
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        http = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:API_HOST]];
-        [http setRequestSerializer:[AFJSONRequestSerializer serializer]];
-        [http setResponseSerializer:[AFJSONResponseSerializer serializer]];
-    }
-    return self;
-}
-
 #pragma mark public methods
 
-- (void)registerDeviceTokenWithServer:(NSString *)appName token:(NSString *)token settings:(NSDictionary *)settings
++ (void)registerDeviceTokenWithServer:(NSString *)appName token:(NSString *)token settings:(NSDictionary *)settings
 {
     NSString *path = [NSString stringWithFormat:@"/api/push_notifications"];
     NSDictionary *data = @{@"app": appName, @"token": token, @"settings": settings};
-    [self POST:path data:data callback:NULL];
+    [self makeRequestWithMethod:@"POST" action:path parameters:nil data:data completion:NULL];
 }
 
 #pragma mark private methods
 
-- (void)POST:(NSString *)path data:(NSDictionary *)data callback:(FasTApiResponseBlock)callback
-{
-    [http POST:path parameters:data progress:nil success:^(NSURLSessionDataTask *task, id response) {
-        if (callback) callback(response);
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"%@", error);
-        if (callback) callback(nil);
++ (void)makeRequestWithMethod:(NSString *)method action:(NSString *)action parameters:(NSDictionary *)params data:(NSDictionary *)data completion:(nullable void (^)(id _Nullable, NSError * _Nullable))completion {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[self urlWithPath:action params:params]];
+    request.HTTPMethod = method;
+    
+    if (data) {
+        NSData *body = [NSJSONSerialization dataWithJSONObject:data options:kNilOptions error:nil];
+        request.HTTPBody = body;
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    }
+    
+    NSURLSessionDataTask *task = [[self session] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (!completion) return;
+        
+        NSDictionary *jsonResponse;
+        if (data) {
+            jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        }
+        completion(jsonResponse, error);
     }];
+    
+    [task resume];
 }
+
++ (NSURLSession *)session {
+    static NSURLSession *sharedSession = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        config.HTTPAdditionalHeaders = @{ @"Accept": @"application/json" };
+        sharedSession = [NSURLSession sessionWithConfiguration:config];
+    });
+    return sharedSession;
+}
+
++ (NSURL *)urlWithPath:(NSString *)path params:(NSDictionary *)params {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wunknown-escape-sequence"
+    NSString *url = [NSString stringWithFormat:@"%@%@", NSStringize(API_HOST), path];
+    #pragma clang diagnostic pop
+
+    NSURLComponents *components = [NSURLComponents componentsWithString:url];
+
+    if (params) {
+        NSMutableArray *queryItems = [NSMutableArray array];
+        for (NSString *key in params) {
+            [queryItems addObject:[NSURLQueryItem queryItemWithName:key value:params[key]]];
+        }
+        components.queryItems = queryItems;
+    }
+
+    return components.URL;
+}
+
 
 @end

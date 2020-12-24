@@ -8,13 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^FasTApiResponseBlock)(id response);
-
-@class MKNetworkEngine;
-
 @interface FasTApi : NSObject
 
-+ (FasTApi *)defaultApi;
-- (void)registerDeviceTokenWithServer:(NSString *)appName token:(NSString *)token settings:(NSDictionary *)settings;
++ (void)registerDeviceTokenWithServer:(NSString *)appName token:(NSString *)token settings:(NSDictionary *)settings;
 
 @end

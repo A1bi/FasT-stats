@@ -63,7 +63,7 @@
     BOOL soundEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"soundEnabled"];
     NSDictionary *settings = @{@"sound_enabled": @(soundEnabled)};
     
-    [[FasTApi defaultApi] registerDeviceTokenWithServer:@"stats" token:pushDeviceToken settings:settings];
+    [FasTApi registerDeviceTokenWithServer:@"stats" token:pushDeviceToken settings:settings];
 }
 
 - (void)setupSentry {

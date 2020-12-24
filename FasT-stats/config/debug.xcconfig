@@ -1,5 +1,5 @@
 // DEBUG CONFIGURATION
 
-API_HOST = "http:/$()/localhost:3000"
+API_HOST = "http:\\/\\/localhost:3000"
 
 #include? "debug.local.xcconfig"
